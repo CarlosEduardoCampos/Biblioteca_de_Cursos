@@ -1,0 +1,8 @@
+Instruções
+Desenvolva um programa em C++ utilizando structs para cadastro de equipes para uma maratona de programação.
+Cada equipe é composta por um nome de identificação, nível da equipe(Iniciante ou Experiente), 3 alunos
+titulares e um aluno reserva. Dos alunos, você deve salvar o nome, ano de nascimento, sexo e período.
+
+Apresente um menu para:
+cadastrar as equipes com seus respectivos dados;
+Imprimir os dados das equipes cadastradas por nível.

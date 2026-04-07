@@ -1,0 +1,11 @@
+Exibir um menu tipo o a seguir:
+1 - Somar
+2 - Subtrair
+3 - Multiplicar
+4 - Dividir
+
+Use pelo menos 1 vez os tipos de funções abaixo:
+Função sem retorno e sem parâmetros
+Função com retorno e sem parâmetros
+Função sem retorno e com parâmetros
+Funcão com retorno e com parâmetros

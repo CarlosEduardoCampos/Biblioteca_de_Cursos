@@ -1,0 +1,5 @@
+-> Comando de instalação do slim framework:
+ $composer require slim/slim:"4.*"
+
+-> PSR-17
+composer require slim/psr7

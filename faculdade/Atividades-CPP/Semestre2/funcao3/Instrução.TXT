@@ -1,0 +1,10 @@
+1 - Desenvolva um programa em C++ com uma função que calcule A elevado à B. Leia no programa principal os
+valores de A e B, repasse-os para a função e a mesma deve retornar o resultado da chamada da sub-rotina.
+Obs: o resultado deve ser mostrado na tela na main(), e não na função. Exemplo: 2 elevado à 4 é igual à
+2*2*2*2 = 16.
+
+2 - a) Escreva uma função de nome SomaImpares que recebe, como parâmetro, um número inteiro e retorna a
+soma de todos os números ímpares menores ou iguais ao N. (Obs: não existem números ímpares negativos).
+b) Desenvolva um programa em C++ que leia um número N inteiro e, se ele for positivo, imprima a soma de
+todos os números ímpares menores ou iguais a N, chamando, para isso, a função do item (a); caso contrário,
+imprimir a mensagem ‘Número não é positivo’.

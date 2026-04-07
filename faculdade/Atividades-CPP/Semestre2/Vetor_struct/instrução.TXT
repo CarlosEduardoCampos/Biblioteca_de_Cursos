@@ -1,0 +1,12 @@
+ Instruções
+ Desenvolva um Sistema para Controle de Clientes descrito a seguir:
+ Crie uma estrutura (Structs) chamada “Cliente” contendo nome, cpf,
+ idade, crédito e sexo dos clientes.
+
+ Crie uma vetor da Struct “Cliente”
+
+ Cadastre os dados do cliente em uma Lista da Struct.
+
+ Adicione uma opção que mostre o nome dos clientes que possuem crédito maior ou igual ao valor digitado pelo usuário.
+
+ Adicione uma opção que filtre essa consulta a partir do sexo também.

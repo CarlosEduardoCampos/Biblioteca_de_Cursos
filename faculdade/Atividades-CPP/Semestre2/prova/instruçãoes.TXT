@@ -1,0 +1,20 @@
+Cada funcionário deve possuir:
+Nome Completo
+Idade
+Sexo (representado por um caractere, ‘M’ ou ‘F’)
+CPF (armazenado em string)
+Cargo que ocupa
+Salário
+Data de Nascimento (dia e ano números inteiros, mês deve ser uma string)
+Codigo do Setor onde trabalha (0­-99)
+
+Você pode definir quantas estruturas achar necessário. 
+Seu programa deve criar um vetor que consiga armazenar pelo menos 50 funcionários.
+Crie um menu que permita aos usuários:
+Cadastrar funcionários;
+Listar todos funcionários;
+Listar funcionários filtrando por sexo;
+Listar funcionários filtrando por setor.
+OBS:
+Postar de preferência o link do repl ou o arquivo .cpp
+Prova individual, ou seja, qualquer indício de cópia acarretará em nota 0 para ambos.

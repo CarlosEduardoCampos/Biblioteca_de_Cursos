@@ -1,0 +1,18 @@
+{
+    "name": "energetica/composer",
+    "description": "Site institucional com acompanhamento dos sensores",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Energetica\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos",
+            "email": "carlos.admcode@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

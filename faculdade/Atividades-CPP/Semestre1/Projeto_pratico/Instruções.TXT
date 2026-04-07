@@ -1,0 +1,12 @@
+Instruções
+Crie um algorítmo onde o usuário escolha qual o tipo de conversão ele deseja fazer:
+Números binários para decimais
+Números decimais para binários
+Após isso, o algoritmo deverá fazer a conversão selecionada.
+
+Crie um repositório no Git(GitHub, Bitbucket, ..) e poste na atividade o link do repositório.
+
+OBS:
+Não precisa considerar parte fracionária dos decimais e binários;
+Atividade pode ser feita em duplas, porém não esqueça de informar os participantes;
+Trabalhos iguais ou cópias, poderão ser zerados.
