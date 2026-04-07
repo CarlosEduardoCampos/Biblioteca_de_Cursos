@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/videoico.ico" type="image/x-icon">
+    <title> Contatos </title>
+    <link rel="stylesheet" href="estilos_css/menu.css">
+    <link rel="stylesheet" href="estilos_css/contedo.css">
+    <link rel="stylesheet" href="estilos_css/pequisa.css">
+    <link rel="stylesheet" href="estilos_css/contatos.css">
+</head>
+<!---->
+<script src="codigo/pesquisa.js"></script>
+<body>
+    <section class="menu">
+        <input type="checkbox" class="botao" name="menu-ck" id="menu-ck">
+        <label for="menu-ck" class="botao">
+            <img src="-img-/book.png" id="menuimg" alt="img-menu">
+        </label>
+
+        <header class="cabeca">
+
+            <nav id="menu">
+                <form class="pesq">
+                    <input type="search" name="barra_p" class="barra_p" placeholder="Pesquisar" list="historico">
+                    <datalist id="historico">
+            
+                        <option value=""></option>
+            
+                    </datalist>
+                </form>
+                <ul>
+                    <li>
+                        <a href="index.html""> Home </a>
+                    </li>
+                    <li>
+                        <a href="series.html"> Séries </a>
+                    </li>
+                    <li>
+                        <a href="filme.html"> Filmes </a>
+                    </li>
+                    <li>
+                        <a href="anime.html"> Animes </a>
+                    </li>
+                    <li>
+                        <a href="contatos.html"> Contatos </a>
+                    </li>
+                </ul>
+            </nav>                    
+        </header>
+    </section>
+    <hr>
+    <div class="tela">
+        <a href="http://facebook.com"><img src="-img-/face.png" class="media-object  img-responsive img-thumbnail">
+        <a href="https://www.instagram.com/"><img src="-img-/insta.png" class="media-object  img-responsive img-thumbnail"></a>
+        
+        <div class="dados">
+            <address> Antonio Pereira Leite, 599 - Bela Vista - Passos - MG </address>
+            <p>
+                <img src="imagens/whasts.png" alt="Whastssap" name="img_whats" width="35px">
+                <label for="img_whats"> (37) 9999-9999 </label>
+            </p>
+            
+        </div>
+        
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <div>
+                <input type="text" id="nome" name="usuario_nome" placeholder="Nome"/>
+            </div>
+            <div>
+                <input type="email" id="email" name="usuario_email" placeholder="E-mail" />
+            </div>
+            <div>
+                <textarea id="msg" name="usuario_msg" placeholder="Mensagem"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Enviar sua mensagem</button>
+            </div>
+                
+        </form>  
+        
+    </div>
+</body>
+</html>

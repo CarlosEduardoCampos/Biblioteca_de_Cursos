@@ -1,0 +1,94 @@
+.tela{
+    color: azure;
+    padding: 10px
+}
+.tela a{
+    margin: 20px;
+}
+.tela a:hover{
+    transition: 0.5s;
+    opacity: 0.7;
+}
+.tela .dados{
+    width: 400px;
+    text-align: center;
+    font-size: 13pt;
+    padding: 15px;
+    background-color: rgba(6, 236, 252, 0.089);
+    border: 1px solid rgb(0, 195, 255);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.tela .dados p{
+    margin: 5px;
+}
+.tela .dados p img{
+    margin-bottom: -12px;
+}
+.tela form {
+    /* Apenas para centralizar o form na página */
+    margin: auto;
+    width: 78%;
+    /* Para ver as bordas do formulário */
+    padding: 5px;
+    border: 1px solid rgb(0, 195, 255);
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: rgba(6, 236, 252, 0.089);
+    text-align: center;
+}
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    font-size: 15pt;
+}
+.tela input, textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 14pt sans-serif;
+
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 35%;
+    padding: 5px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid rgb(83, 29, 29);
+}
+.tela textarea{
+    width: 80%;
+}
+input:focus, textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: rgb(53, 26, 26);
+}
+.tela textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+}
+button {
+    /* Para posicionar os botões para a mesma posição dos campos de texto */
+    margin: 20px;
+    font-size: 15pt;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: rgba(0, 195, 255, 0.664);
+    color: whitesmoke;
+    font-size: 14pt;
+}

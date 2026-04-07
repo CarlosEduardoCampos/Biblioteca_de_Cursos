@@ -1,0 +1,27 @@
+{
+  "name": "filmes-end-series",
+  "version": "1.0.0",
+  "description": "Um site com fatos sobre séries, filme, e animes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosEduardoCampos/Filmes-end-Series.git"
+  },
+  "author": "Carlos E. C. Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosEduardoCampos/Filmes-end-Series/issues"
+  },
+  "homepage": "https://github.com/CarlosEduardoCampos/Filmes-end-Series#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.0",
+    "mysql": "^2.18.1"
+  }
+}

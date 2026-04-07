@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=titulo%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/admList.css">
+</head>
+
+<body>
+    <h1>MyListMovies</h1>
+
+    <button>
+        <a href="#"> Nova Midia</a>
+    </button>
+    <div>
+        <table>
+            <tr class="titulos">
+                <td> NOME </td>
+                <td> CATEGORIA </td>
+                <td> LINK </td>
+                <td> Editar </td><!--Botão de Edição-->
+                <td> Visualizar</td><!--Botão de visualização-->
+                <td> Deletar </td><!--Botão de Deletar-->
+            </tr>
+            
+            <%for(let i = 0; i < midias.length; i++){%>
+                <tr>
+                    <td> <%= midias[i].nome %> </td>
+                    <td> <%= midias[i].categoria %> </td>
+                    <td>
+                        <a href="<%= midias[i].link %>" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-external-link"></i>
+                        </a>
+                    </td>
+
+                    <td><!--Botão de Edição-->
+                        <a href="#">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    </td>
+
+                    <td><!--Botão de visualização-->
+                        <a href="#">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </td>
+
+                    <td><!--Botão de Deletar-->
+                        <a href="/adm/midia/deletar/<%=midias[i].idMidia%>">
+                            <i class="fa fa-trash" style="color: red;"></i>
+                        </a>
+                    </td>
+                </tr>
+            <%}%>
+            <tr>
+                <td> xxxxx </td>
+                <td> xxxxx </td>
+                <td> xxxxx </td>
+                <td> xxxxx </td><!--Botão de Edição-->
+                <td> xxxxx </td><!--Botão de visualização-->
+                <td> xxxxx </td><!--Botão de Deletar-->
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

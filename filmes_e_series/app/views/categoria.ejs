@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/videoico.ico" type="image/x-icon">
+    <title><%=titulo%></title>
+    <!--Styles-->
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/contedo.css">
+    <link rel="stylesheet" href="css/pequisa.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!---->
+<script src="codigo/pesquisa.js"></script>
+<body>
+    <section class="menu">
+        <input type="checkbox" class="botao" name="menu-ck" id="menu-ck">
+        <label for="menu-ck" class="botao">
+            <i class="fa fa-bars" id="menuimg"></i>
+        </label>
+
+        <header class="cabeca">
+
+            <nav id="menu">
+                <form class="pesq">
+                    <input type="search" name="barra_p" class="barra_p" placeholder="Pesquisar" list="historico">
+                    <datalist id="historico">
+            
+                        <option value=""></option>
+            
+                    </datalist>
+                </form>
+                <ul>
+                    <li>
+                        <a href="/"> Home </a>
+                    </li>
+                    <li>
+                        <a href="/series"> Séries </a>
+                    </li>
+                    <li>
+                        <a href="/filmes"> Filmes </a>
+                    </li>
+                    <li>
+                        <a href="/animes"> Animes </a>
+                    </li>
+                </ul>
+            </nav>                    
+        </header>
+    </section>
+    <hr>
+    <div class="tela">
+        <h2> Ação </h2>
+        <section class="conteudo">
+            <% for(let i=0;  i < 10; i++ ){%>
+                <div class="info">
+                    <img src="img/clearimg.png" alt="area de imagem">
+                    <p> <a href="#" rel="noopener noreferrer"> Série </a></p>
+                </div>
+            <%}%>
+        </section>
+        <hr>
+        <h2> Terror </h2>
+        <section class="conteudo">
+            <% for(let i=0;  i < 10; i++ ){%>
+                <div class="info">
+                    <img src="img/clearimg.png" alt="area de imagem">
+                    <p> <a href="#" rel="noopener noreferrer"> Série </a></p>
+                </div>
+            <%}%>
+        </section>
+        <hr>
+        <h2> Drama </h2>
+        <section class="conteudo">
+            <% for(let i=0;  i < 10; i++ ){%>
+                <div class="info">
+                    <img src="img/clearimg.png" alt="area de imagem">
+                    <p> <a href="#" rel="noopener noreferrer"> Série </a></p>
+                </div>
+            <%}%>
+        </section>
+        <hr>
+        <h2> Romance </h2>
+        <section class="conteudo">
+            <% for(let i=0;  i < 10; i++ ){%>
+                <div class="info">
+                    <img src="img/clearimg.png" alt="area de imagem">
+                    <p> <a href="#" rel="noopener noreferrer"> Série </a></p>
+                </div>
+            <%}%>
+        </section>
+    </div>
+</body>
+</html>
