@@ -1,0 +1,135 @@
+#createForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 100px;
+    padding-right: 40px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    padding: 20px 0px;
+}
+
+.form-group > input{
+    padding: 5px;
+    font-size: 1em;
+}
+.col4{
+    grid-column: span 4;
+}
+.col3{
+    grid-column: span 3;
+}
+
+.col2{
+    grid-column: span 2;
+}
+
+.col1{
+    grid-column: span 1;
+}
+
+/*Estilo dos inputs*/
+.inputs{
+    flex-direction: column;
+    gap: 2.4rem;
+}
+label{
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--verdeEscuro);
+    gap: .4rem;
+    align-items: center;
+    padding: 3px;
+}
+input, select{
+    margin-top: .4rem;
+    width: 100%;
+    padding: 1.2rem;
+    border: .1rem solid #374151;
+    background: var(--fontColor);
+    border-radius: .4rem;
+    color: var(--verdeEscuro);
+}
+input:focus{
+    outline: 0.15rem solid var(--verdeClaro);
+}
+/*Input error*/
+input:invalid:focus{
+    outline: 0.15rem solid #FB7185;
+}
+input + .warning{
+    display: none;
+}
+input:invalid:focus + .warning{
+    font-size: 1.4rem;
+    margin-top: .8rem;
+    color: #FB7185;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+.flex{
+    display: flex;
+}
+.col-2{
+    gap: 2.4rem;
+    align-items: center;
+}
+.col-2 > .input-wrapper:nth-child(1){
+    flex-basis: 80%;
+}
+.help > img{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+/*Mensagem de segurança*/
+.info-security{
+    margin-top: 4rem;
+    justify-content: center;
+    gap: .8rem;
+    font-size: 1.4rem;
+    color: #E5E7EB;
+}
+/*Estilo do botão*/
+.form_btn{
+    margin-top: 4rem;
+    border: 0;
+    padding: 1.6rem;
+    width: 100%;
+    box-shadow: .0rem .4rem 1.6rem rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #000;
+    border: solid 1px #000;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    background: var(--verdeEscuro);
+    color: #fff;
+}
+
+#conectForm > option {
+    background-color: white; /* Cor de fundo das opções */
+    color: black; /* Cor do texto das opções */
+}
+
+#conectForm > button{
+    margin: 0;
+    margin-top: 23px;
+    padding: 10px;
+    width: 150px;
+    height: 60%;
+    line-height: 0;
+}

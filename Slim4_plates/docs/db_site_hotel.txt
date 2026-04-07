@@ -1,0 +1,202 @@
+-- CREATE DATABASE site_hotel;
+
+USE site_hotel;
+
+DROP TABLE IF EXISTS Usuarios;
+DROP TABLE IF EXISTS Fotos;
+DROP TABLE IF EXISTS Cat_Com;
+DROP TABLE IF EXISTS Tarifas;
+DROP TABLE IF EXISTS Categorias;
+DROP TABLE IF EXISTS Comodidades;
+--
+DROP PROCEDURE IF EXISTS InsertUpdateUsuarios;
+DROP PROCEDURE IF EXISTS InsertUpdateCategorias;
+DROP PROCEDURE IF EXISTS InsertUpdateQuartos;
+DROP PROCEDURE IF EXISTS InsertUpdateComodidades;
+DROP PROCEDURE IF EXISTS InsertUpdateTarifa;
+
+
+-- Tabela Usuarios
+
+--
+CREATE TABLE IF NOT EXISTS Usuarios(
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL,
+    senha VARCHAR(150) NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
+    email VARCHAR(50) NOT NULL
+);
+
+-- Tabela Categorias
+
+--
+CREATE TABLE IF NOT EXISTS Categorias(
+	id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100),
+    camas_casal INT,
+    camas_solteiro INT,
+    lotacao INT,
+    estado BOOLEAN
+);
+
+-- Tabela Fotos
+
+--
+
+CREATE TABLE  IF NOT EXISTS Fotos(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(50) NOT NULL,
+    arquivo VARCHAR(150) NOT NULL,
+    fk_categoria INT NOT NULL,
+    FOREIGN KEY (fk_categoria) REFERENCES Categorias(id_categoria)
+);
+
+-- Tabela Comodidades
+
+--
+CREATE TABLE IF NOT EXISTS Comodidades(
+	id_comodidade INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(20),
+    logo VARCHAR(150)
+);
+
+-- Tabela de interação lógica entre Comodidades e Categorias
+
+--
+CREATE TABLE IF NOT EXISTS Cat_Com(
+    fk_comodidade INT,
+    fk_categoria INT,
+    FOREIGN KEY (fk_comodidade) REFERENCES Comodidades(id_comodidade),
+    FOREIGN KEY (fk_categoria) REFERENCES Categorias(id_categoria)
+);
+
+-- Tabela Tarifas
+
+--
+CREATE TABLE IF NOT EXISTS Tarifas(
+    id_tarifa INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(50),
+    valor_diaria DECIMAL(10,2),
+    descricao VARCHAR(200),
+    estado BOOLEAN,
+    fk_categoria INT,
+    FOREIGN KEY (fk_categoria) REFERENCES Categorias(id_categoria)
+);
+
+-- Procedimentos Armazenados
+
+--
+DELIMITER //
+
+CREATE PROCEDURE IF NOT EXISTS InsertUpdateUsuarios (
+    IN p_id_usuario INT,
+    IN p_login VARCHAR(50),
+    IN p_senha VARCHAR(150),
+    IN p_telefone VARCHAR(15),
+    IN p_email VARCHAR(50)
+)
+BEGIN
+    IF EXISTS (SELECT 1 FROM Usuarios WHERE id_usuario = p_id_usuario) THEN
+        -- Atualiza o registro existente
+        UPDATE Usuarios
+        SET login = p_login,
+            senha = p_senha,
+            telefone = p_telefone,
+            email = p_email
+        WHERE id_usuario = p_id_usuario;
+    ELSE
+        -- Insere um novo registro
+        INSERT INTO Usuarios (login, senha, telefone, email)
+        VALUES (p_login, p_senha, p_telefone, p_email);
+	-- Retorna o último ID inserido
+	SELECT LAST_INSERT_ID();
+    END IF;
+END //
+
+DELIMITER ;
+
+-- Procedimento para Categorias
+--
+DELIMITER //
+
+CREATE PROCEDURE IF NOT EXISTS InsertUpdateCategorias (
+    IN p_id_categoria INT,
+    IN p_titulo VARCHAR(100),
+    IN p_camas_casal INT,
+    IN p_camas_solteiro INT,
+    IN p_lotacao INT,
+    IN p_estado BOOLEAN
+)
+BEGIN
+    IF EXISTS (SELECT 1 FROM Categorias WHERE id_categoria = p_id_categoria) THEN
+        -- Atualiza o registro existente
+        UPDATE Categorias
+        SET titulo = p_titulo,
+            camas_casal = p_camas_casal,
+            camas_solteiro = p_camas_solteiro,
+            lotacao = p_lotacao,
+            estado = p_estado
+        WHERE id_categoria = p_id_categoria;
+    ELSE
+        -- Insere um novo registro
+        INSERT INTO Categorias (titulo, camas_casal, camas_solteiro, lotacao, estado)
+        VALUES (p_titulo, p_camas_casal, p_camas_solteiro, p_lotacao, p_estado);
+        -- Retorna o último ID inserido
+	    SELECT LAST_INSERT_ID();
+    END IF;
+END //
+
+-- Procedimento para Comodidades
+
+--
+DELIMITER //
+
+CREATE PROCEDURE IF NOT EXISTS InsertUpdateComodidades (
+    IN p_id_comodidade INT,
+    IN p_titulo VARCHAR(20),
+    IN p_logo VARCHAR(150)
+)
+BEGIN
+    IF EXISTS (SELECT 1 FROM Comodidades WHERE id_comodidade = p_id_comodidade) THEN
+        -- Atualiza o registro existente
+        UPDATE Comodidades
+        SET titulo = p_titulo
+        WHERE id_comodidade = p_id_comodidade;
+    ELSE
+        -- Insere um novo registro
+        INSERT INTO Comodidades (titulo, logo)
+        VALUES (p_titulo, p_logo);
+    END IF;
+END //
+
+-- Procedimento para Tarifas
+
+--
+DELIMITER //
+
+CREATE PROCEDURE IF NOT EXISTS InsertUpdateTarifas(
+    IN p_id_tarifa INT,
+    IN p_titulo VARCHAR(50),
+    IN p_valor_diaria DECIMAL(10, 2),
+    IN p_descricao VARCHAR(200),
+    IN p_estado BOOLEAN,
+    IN p_fk_categoria INT
+)
+BEGIN
+    IF EXISTS (SELECT 1 FROM Tarifas WHERE id_tarifa = p_id_tarifa) THEN
+        -- Atualiza o registro existente
+        UPDATE Tarifas
+        SET titulo = p_titulo,
+            valor_diaria = p_valor_diaria,
+            descricao = p_descricao,
+            estado = p_estado,
+            fk_categoria = p_fk_categoria
+        WHERE id_tarifa = p_id_tarifa;
+    ELSE
+        -- Insere um novo registro
+        INSERT INTO Tarifas (titulo, valor_diaria, descricao, estado, fk_categoria)
+        VALUES (p_titulo, p_valor_diaria, p_descricao, p_estado, p_fk_categoria);
+    END IF;
+END //
+
+DELIMITER ;

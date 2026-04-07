@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+#list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 80px;
+}
+h1{
+    font-family: "Ubuntu";
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: var(--verdeEscuro);
+}
+table > button{
+    display: block;
+    background-color: var(--fontColor);
+    width: 150px;
+    height: 40px;
+    border: none;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-weight: 700;
+}
+
+table> button:hover{
+    background-color: rgb(13, 219, 13);
+}
+
+table a{
+    margin-bottom: 10px;  
+    text-decoration: none;
+    color: rgba(12, 12, 12, 0.644);
+    font-size: 15px;
+    font-size: 20px;
+}
+
+table{
+    width: 100%;
+    overflow-y: auto;
+    text-align: center;
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
+}
+
+table tr{
+    flex: 0;
+    align-items: stretch;
+    box-shadow: 0px 0px 3px rgba(136, 136, 136, 0.144);
+}
+
+.titulos{
+    background-color: var(--verdeEscuro);
+    color: white;
+}
+
+table td{
+    padding: 5px;
+    border-right: solid 0.5px rgba(136, 136, 136, 0.514);
+}
+table td img{
+    width: 100px;
+}
+.list_btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    list-style: none;
+}
+
+.plus_btn{
+    width: 60px;
+    height: 60px;
+    background-color: var(--verdeEscuro);;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+}
+
+.plus_btn:hover{
+    background-color: rgb(22, 207, 22);
+}

@@ -1,0 +1,10 @@
+comoposer init
+composer require plates
+composer require slim
+composer du
+composer require slim/psr7
+
+comoposer install
+
+php -S localhost:8000 -t public
+
