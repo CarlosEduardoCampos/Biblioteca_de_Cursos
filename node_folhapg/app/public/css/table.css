@@ -1,0 +1,44 @@
+table {
+    width: 99%;
+    margin: 10px 0px;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #666666;
+    transition: 0.3s;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+td a{
+    position: relative;
+    font-size: 1.5em;
+    color: #333;
+    transition: 0.3s;
+}
+
+.red{
+    color: red;
+}
+
+.center{
+    text-align: center;
+}
+
+td:hover{
+    background-color: #333;
+    color: white;
+}
+
+td:hover a{
+    color: white;
+}

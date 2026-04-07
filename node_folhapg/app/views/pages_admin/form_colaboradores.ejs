@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cadastro de Colaborador</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../css/menu_admin.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/cabecalho_tabela.css">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <%- include('../components/menu_admin.ejs') -%>
+    <header id="cabecalho_tabela">
+        <h1>Empresas > Colaboradores > Novo Colaborador</h1>
+        <hr>
+    </header>
+    <main>
+        <form action="<%= action %>" method="post" class="col4">
+            <div class="form-group col3">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Nome Completo" value="<% if(colaborador.length != 0){ %> <%= colaborador[0].nome %> <% } %>" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" value="<% if(colaborador.length != 0){ %> <%= colaborador[0].telefone %> <% } %>" required>
+            </div>
+            <div class="form-group col2">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" placeholder="meuemail@gmail.com" value="<% if(colaborador.length != 0){ %> <%= colaborador[0].email %> <% } %>">
+            </div>
+            <div class="form-group col2">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" value="<% if(colaborador.length != 0){ %> <%= colaborador[0].senha %> <% } %>">
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" name="cargo" value="<% if(colaborador.length != 0){ %> <%= colaborador[0].cargo %> <% } %>">
+            </div>
+            <div class="form-group">
+                <label for="salario">Salario:</label>
+                <input type="number" name="salario" value= <% if(colaborador.length != 0){ %> <%= colaborador[0].salario %> <% } %>>
+            </div>
+            <div class="form-group">
+                <label for="DT_admissao">Data da Admissão:</label>
+                <input type="date" name="DT_admissao" value= <%if(colaborador.length != 0){%><%=colaborador[0].admissao%><%}%> required>
+            </div>
+            <div class="form-group">
+                <label for="DT_demissao">Data da Demissão:</label>
+                <input type="date" name="DT_demissao" value="<% if(colaborador.length != 0){ %> <%= colaborador[0].demissao %> <% } %>">
+            </div>
+            <div class="form-group">
+                <label for="FK_periodo">Periodo de Pagamento:</label>
+                <select name="FK_periodo">
+                    <option <% if(colaborador && [0].FK_periodo === 1){ %> Selected <% } %> value="1">Mensal</option>
+                    <option <% if(colaborador && [0].FK_periodo === 2){ %> Selected <% } %> value="2">Semanal</option>
+                    <option <% if(colaborador && [0].FK_periodo === 3){ %> Selected <% } %> value="3">Quinzenal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="FK_turno">Turno:</label>
+                <select name="FK_turno">
+                    <option <% if(colaborador && [0].FK_turno === 1){ %> Selected <% } %> value="1">Manhã</option>
+                    <option <% if(colaborador && [0].FK_turno === 2){ %> Selected <% } %> value="2">Tarde</option>
+                    <option <% if(colaborador && [0].FK_turno === 3){ %> Selected <% } %> value="3">Noite</option>
+                </select>
+            </div>
+            <div class="form-group col4">
+                
+            </div>
+            <input type="hidden" name="FK_empresa"  value= <% if(colaborador.length != 0){ %> <%= colaborador[0].FK_empresa %> <% } %>>
+            <input type="hidden" name="ID_login"  value= <% if(colaborador.length != 0){ %> <%= colaborador[0].ID_login %> <% } %>>
+            <div class="form-group col4">
+                <input type="submit" value="Criar" class="btn">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

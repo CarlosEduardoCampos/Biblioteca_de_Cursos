@@ -1,0 +1,36 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( let i = 0; i < empresas.length; i++) { %>
+            <tr>
+                <td> <%= empresas[i].nome %></td>
+                <td> <%= empresas[i].email %> </td>
+                <td> <%= empresas[i].telefone %> </td>
+                <td class="center">
+                    <a href="/empresas/delete/<%= empresas[i].ID_login %>" class="red">
+                        <i class='bx bx-trash' ></i>
+                    </a>
+                </td>
+                <td class="center">
+                    <a href="/empresas/edit/<%= empresas[i].ID_login %>">
+                        <i class='bx bx-edit' ></i>
+                    </a>
+                </td>
+                <td class="center">
+                    <a href="/colaboradores/list/<%= empresas[i].ID_empresa %>">
+                        <i class='bx bx-group' ></i>
+                    </a>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
