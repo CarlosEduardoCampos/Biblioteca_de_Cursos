@@ -4,6 +4,5 @@ public class App {
 
         System.out.println("Argumento 01: " + args[0]);
         System.out.println("Argumento 02: " + args[1]);
-
     }
 }

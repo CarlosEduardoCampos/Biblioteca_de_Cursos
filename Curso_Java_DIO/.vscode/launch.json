@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App03",
+            "request": "launch",
+            "mainClass": "App03",
+            "projectName": "Curso_Java_DIO_4d677535"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
