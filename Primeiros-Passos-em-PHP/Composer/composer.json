@@ -1,0 +1,20 @@
+{
+    "name": "carlos/composer",
+    "description": "aula_php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Carlos\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos",
+            "email": "Carlos.admcode@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "monolog/monolog":"1.0.*"
+    }
+}
